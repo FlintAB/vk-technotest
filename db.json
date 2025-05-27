@@ -1,0 +1,12 @@
+{
+   "objectives": [
+      {
+      "id": 1,
+      "title": "Задача 1",
+      "dateStart": "2023-01-01",
+      "dateEnd": "2023-12-31",
+      "status": "active",
+      "priority": "high"
+      }
+   ]
+}
