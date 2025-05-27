@@ -1,11 +1,8 @@
-import './App.css'
+import { useReactTable } from "@tanstack/react-table"
+
 
 function App() {
-  return (
-    <>
-
-    </>
-  )
+  const table = useReactTable(options);
 }
 
 export default App
