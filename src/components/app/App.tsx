@@ -2,13 +2,14 @@ import { flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-tabl
 import React from "react";
 import { columns, createDynamicColumns } from "../columns/columns";
 import type { TObjective } from "../../types/ObjectiveTable";
+import type { TDynamicColumnDef } from "../../types/DynamicColumns";
 
 
 function App() {
   const [data, setData] = React.useState<TObjective[]>([]);
-  const [dynamicColumns, setDynamicColumns] = React.useState<any[]>([]);
+  const [dynamicColumns, setDynamicColumns] = React.useState<TDynamicColumnDef[]>([]);
 
-  const table = useReactTable({data, columns: [...columns, ...dynamicColumns], getCoreRowModel: getCoreRowModel()});
+  const table = useReactTable<TObjective>({data, columns: [...columns, ...dynamicColumns], getCoreRowModel: getCoreRowModel()});
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +17,7 @@ function App() {
         const response = await fetch('http://localhost:3001/objectives');
         const serverData = await response.json();
         
-        const formattedData = serverData.map((item: any) => ({
+        const formattedData = serverData.map((item: TObjective) => ({
           ...item,
           dateStart: new Date(item.dateStart),
           dateEnd: new Date(item.dateEnd)
@@ -42,13 +43,12 @@ function App() {
           borderCollapse: 'collapse', 
           marginTop: '20px', 
           textAlign: 'center', 
-          border: '1px solid black'
         }}>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map(header => (
-                <th key={header.id} style={{borderRight: 'solid'}}>
+                <th key={header.id} style={{border: 'solid black'}}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -60,7 +60,7 @@ function App() {
             </tr>
           ))}
         </thead>
-        <tbody style={{borderStyle: 'solid'}}>
+        <tbody style={{border: 'solid'}}>
           {table.getRowModel().rows.map(row => (
             <tr key={row.id}>
               {row.getVisibleCells().map(cell => (
