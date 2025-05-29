@@ -29,18 +29,3 @@ export const columns = [
       header: () => 'Priority'
    }),
 ];
-
-export const createDynamicColumns = (data: TObjective[]) => {
-   if (!data.length) return [];
-
-   return Object.keys(data[0])
-      .filter(key => !['id', 'title', 'dateStart', 'dateEnd', 'status', 'priority'].includes(key))
-      .map(key => columnHelper.accessor(key, {
-      header: key,
-      cell: ({ getValue }) => {
-         const value = getValue();
-         if (value instanceof Date) return value.toLocaleDateString('ru-RU');
-         return value;
-      }
-      }));
-};

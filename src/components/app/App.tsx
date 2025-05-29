@@ -1,8 +1,9 @@
 import { flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table"
 import React from "react";
-import { columns, createDynamicColumns } from "../columns/columns";
+import { columns } from "../columns/columns";
 import type { TObjective } from "../../types/ObjectiveTable";
 import type { TDynamicColumnDef } from "../../types/DynamicColumns";
+import { createDynamicColumns } from "../../utils/createDynamicColumns";
 
 
 function App() {

@@ -5,5 +5,5 @@ export type TObjective = {
    dateEnd: Date;
    status: 'active' | 'inactive';
    priority: 'low' | 'medium' | 'high';
-   [key: string]: string | number | Date;
+   dynamicFields: Record<string, string | number | Date>;
 }
