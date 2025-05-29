@@ -1,12 +1,57 @@
 {
-   "objectives": [
-      {
-      "id": 1,
+  "objectives": [
+    {
+      "id": "1",
       "title": "Задача 1",
       "dateStart": "2023-01-01",
       "dateEnd": "2023-12-31",
       "status": "active",
       "priority": "high"
-      }
-   ]
+    },
+    {
+      "id": "9d6d",
+      "title": "1231",
+      "description": "12312411111111",
+      "dateStart": "2025-05-30T00:00:00.000Z",
+      "dateEnd": "2025-05-31T00:00:00.000Z",
+      "priority": "medium",
+      "status": "active"
+    },
+    {
+      "id": "9d77",
+      "title": "sdf3",
+      "description": "ффффффффффф",
+      "dateStart": "2025-05-31T00:00:00.000Z",
+      "dateEnd": "2025-06-01T00:00:00.000Z",
+      "priority": "high",
+      "status": "active"
+    },
+    {
+      "id": "b19a",
+      "title": "ggggggggggg",
+      "description": "ggggggggggggg",
+      "dateStart": "2025-05-30T00:00:00.000Z",
+      "dateEnd": "2025-05-31T00:00:00.000Z",
+      "priority": "medium",
+      "status": "active"
+    },
+    {
+      "id": "a453",
+      "title": "ddddddddddddddddddd",
+      "description": "ddddddddddddddd",
+      "dateStart": "2025-05-02T00:00:00.000Z",
+      "dateEnd": "2025-05-03T00:00:00.000Z",
+      "priority": "medium",
+      "status": "active"
+    },
+    {
+      "id": "32ab",
+      "title": "11111111111111111",
+      "description": "111111111111111",
+      "dateStart": "2025-05-16T00:00:00.000Z",
+      "dateEnd": "2025-05-30T00:00:00.000Z",
+      "priority": "medium",
+      "status": "active"
+    }
+  ]
 }

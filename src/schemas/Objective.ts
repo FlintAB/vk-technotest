@@ -12,12 +12,12 @@ export const ObjectiveSchema = z.object({
 
    dateStart: z.union([
       z.date(),
-      z.string().datetime({ message: "Некорректный формат даты начала" })
+      z.string()
    ]),
 
    dateEnd: z.union([
       z.date(),
-      z.string().datetime({ message: "Некорректный формат даты окончания" })
+      z.string()
    ]),
 
    priority: z.enum(["low", "medium", "high"]),
