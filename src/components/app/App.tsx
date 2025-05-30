@@ -1,101 +1,120 @@
-import React from 'react';
+import type { ColumnDef } from "@tanstack/react-table";
+import { useState, useRef, useCallback } from "react";
+import type { TObjectiveForm } from "../../schemas/Objective";
 import { columns } from "../columns/columns";
-import { createDynamicColumns } from "../../utils/createDynamicColumns";
-import type { TObjectiveForm } from '../../schemas/Objective';
-import type { TDynamicColumnDef } from '../../types/DynamicColumns';
-import type { TObjective } from '../../types/ObjectiveTable';
-import { ObjectiveForm } from '../form/objectiveForm';
-import { ObjectiveTable } from '../table/objectiveTable';
-import type { ColumnDef } from '@tanstack/react-table';
+import { AddFieldForm } from "../field/AddFieldForm";
+import { ObjectiveForm } from "../form/AddObjectiveForm";
+import { useObjectives } from "../hooks/useObjectives";
+import { ObjectiveTable } from "../table/objectiveTable";
+import type { TObjective } from "../../types/Types";
+
 
 function App() {
-  const [data, setData] = React.useState<TObjective[]>([]);
-  const [dynamicColumns, setDynamicColumns] = React.useState<TDynamicColumnDef[]>([]);
-  const [showForm, setShowForm] = React.useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [showAddField, setShowAddField] = useState(false);
+  const [newFieldKey, setNewFieldKey] = useState('');
+  const tableContainerRef = useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:3001/objectives');
-        const serverData = await response.json();
-        
-        const formattedData = serverData.map((item: TObjective) => ({
-          ...item,
-          dateStart: new Date(item.dateStart),
-          dateEnd: new Date(item.dateEnd),
-          dynamicFields: item.dynamicFields || {},
-        }));
-        
-        setData(formattedData);
-        setDynamicColumns(createDynamicColumns(formattedData));
-      } catch (error) {
-        console.error('Ошибка при запросе данных:', error);
+  const {
+    flatData,
+    dynamicColumns,
+    addedFieldKeys,
+    isLoading,
+    error,
+    isFetching,
+    hasNextPage,
+    fetchNextPage,
+    handleAddObjective,
+    handleAddField,
+    handleRemoveField,
+  } = useObjectives();
+
+  const fetchMoreOnBottomReached = useCallback(
+    (containerRefElement?: HTMLDivElement | null) => {
+      if (containerRefElement) {
+        const { scrollHeight, scrollTop, clientHeight } = containerRefElement;
+        if (
+          scrollHeight > clientHeight &&
+          scrollHeight - scrollTop - clientHeight < 500 &&
+          !isFetching &&
+          hasNextPage
+        ) {
+          fetchNextPage();
+        }
       }
-    };
-
-    fetchData();
-  }, []);
-
-  const handleAddObjective = async (formData: TObjectiveForm) => {
-    try {
-      const response = await fetch('http://localhost:3001/objectives', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          dateStart: new Date(formData.dateStart),
-          dateEnd: new Date(formData.dateEnd)
-        }),
-      });
-
-      const newObjective = await response.json();
-      const formattedObjective: TObjective = {
-        ...newObjective,
-        dateStart: new Date(newObjective.dateStart),
-        dateEnd: new Date(newObjective.dateEnd),
-        dynamicFields: newObjective.dynamicFields || {},
-      }
-      setData(prev => [...prev, formattedObjective]);
-      setDynamicColumns(createDynamicColumns([...data, formattedObjective]));
-      setShowForm(false);
-    } catch (error) {
-      console.error('Error adding objective:', error);
-    }
-  };
-
+    },
+    [fetchNextPage, isFetching, hasNextPage]
+  );
+  
   return (
-    <div style={{ padding: '20px' }}>
-      <button 
-        onClick={() => setShowForm(true)}
-        style={{ 
-          padding: '10px 15px',
-          marginBottom: '20px',
-          backgroundColor: '#4CAF50',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer'
-        }}
-      >
-        Add New Objective
-      </button>
+    <div>
+      <div>
+        <button
+          onClick={() => setShowForm(true)}
+        >
+          Добавить новую запись
+        </button>
+        <button
+          onClick={() => setShowAddField(true)}
+          disabled={dynamicColumns.length >= 15}
+        >
+          Добавить новое поле
+        </button>
+      </div>
+
+      {showAddField && (
+        <AddFieldForm
+        newFieldKey={newFieldKey}
+        setNewFieldKey={setNewFieldKey}
+        onSubmit={async () => await handleAddField(newFieldKey)}
+        onCancel={() => setShowAddField(false)}
+        isDisabled={dynamicColumns.length >= 15 || !newFieldKey.trim() || dynamicColumns.some(col => col.id === `dynamicFields.${newFieldKey}`)}
+        />
+      )}
 
       {showForm ? (
-        <ObjectiveForm 
-          onSubmit={handleAddObjective} 
-          onCancel={() => setShowForm(false)} 
+        <ObjectiveForm
+          onSubmit={async (formData: TObjectiveForm) => {
+            await handleAddObjective(formData);
+            setShowForm(false);
+          }}
+          onCancel={() => setShowForm(false)}
+          dynamicFieldKeys={dynamicColumns.map(col => col.id!.split('.')[1])}
         />
       ) : (
-        data.length === 0 ? (
-          <div>Loading data...</div>
-        ) : (
-          <ObjectiveTable 
-            data={data} 
-            columns={[...columns, ...dynamicColumns] as ColumnDef<TObjective>[]} 
-          />
-        )
+        <div
+          ref={tableContainerRef}
+          onScroll={(e) => fetchMoreOnBottomReached(e.currentTarget)}
+            style={{
+              height: '70vh',        
+              overflowY: 'auto',        
+              position: 'relative',     
+              border: '1px solid #eee', 
+              borderRadius: '8px',      
+              padding: '0 10px'         
+              }}
+        >
+          {isLoading ? (
+            <div>Загрузка данных...</div>
+          ) : error ? (
+            <div>Ошибка: {error.message}</div>
+          ) : flatData.length == 0 ? (
+            <div>Таблица пуста, пожалуйста добавьте первую запись</div>
+          ) : (
+            <>
+              <ObjectiveTable
+                data={flatData}
+                columns={[...columns, ...dynamicColumns] as ColumnDef<TObjective>[]}
+                addedFieldKeys={addedFieldKeys}
+                onRemoveField={handleRemoveField}
+              />
+              {isFetching && <div>Подгрузка данных...</div>}
+              {!hasNextPage && flatData.length > 0 && (
+                <div>Все данные успешно загружены!</div>
+              )}
+            </>
+          )}
+        </div>
       )}
     </div>
   );

@@ -1,75 +1,3352 @@
 {
   "objectives": [
     {
-      "id": "1",
-      "title": "Задача 1",
-      "dateStart": "2023-01-01",
-      "dateEnd": "2023-12-31",
-      "status": "active",
-      "priority": "high"
-    },
-    {
-      "id": "9d6d",
-      "title": "1231",
-      "description": "12312411111111",
-      "dateStart": "2025-05-30T00:00:00.000Z",
-      "dateEnd": "2025-05-31T00:00:00.000Z",
-      "priority": "medium",
-      "status": "active"
-    },
-    {
-      "id": "9d77",
-      "title": "sdf3",
-      "description": "ффффффффффф",
-      "dateStart": "2025-05-31T00:00:00.000Z",
-      "dateEnd": "2025-06-01T00:00:00.000Z",
+      "id": "obj1",
+      "title": "Разработка API для пользователей",
+      "description": "Создать 5 новых endpoints",
+      "dateStart": "2025-06-01",
+      "dateEnd": "2025-06-15",
       "priority": "high",
-      "status": "active"
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "team", "value": "backend" }
+      ]
     },
     {
-      "id": "b19a",
-      "title": "ggggggggggg",
-      "description": "ggggggggggggg",
-      "dateStart": "2025-05-30T00:00:00.000Z",
-      "dateEnd": "2025-05-31T00:00:00.000Z",
+      "id": "obj2",
+      "title": "Обновить дизайн главной страницы",
+      "description": "Адаптация под мобильные устройства",
+      "dateStart": "2025-06-05",
+      "dateEnd": "2025-06-20",
       "priority": "medium",
-      "status": "active"
+      "status": "active",
+      "dynamicFields": [
+        { "key": "designer", "value": "Иван Иванов" }
+      ]
     },
     {
-      "id": "a453",
-      "title": "ddddddddddddddddddd",
-      "description": "ddddddddddddddd",
-      "dateStart": "2025-05-02T00:00:00.000Z",
-      "dateEnd": "2025-05-03T00:00:00.000Z",
-      "priority": "medium",
-      "status": "active"
+      "id": "obj3",
+      "title": "Оптимизация базы данных",
+      "description": "Переиндексация основных таблиц",
+      "dateStart": "2025-06-10",
+      "dateEnd": "2025-06-25",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": []
     },
     {
-      "id": "32ab",
-      "title": "11111111111111111",
-      "description": "111111111111111",
-      "dateStart": "2025-05-16T00:00:00.000Z",
-      "dateEnd": "2025-05-30T00:00:00.000Z",
-      "priority": "medium",
-      "status": "active"
+      "id": "obj4",
+      "title": "Тестирование платежного модуля",
+      "description": "Проверка интеграции с PayPal",
+      "dateStart": "2025-06-15",
+      "dateEnd": "2025-06-30",
+      "priority": "low",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "tester", "value": "Анна Петрова" }
+      ]
     },
     {
-      "id": "0574",
-      "title": "3333333333333",
-      "description": "33333333333333",
-      "dateStart": null,
-      "dateEnd": null,
+      "id": "obj5",
+      "title": "Добавление фильтров в каталог",
+      "description": "Реализация фильтра по цене и категориям",
+      "dateStart": "2025-06-20",
+      "dateEnd": "2025-07-05",
       "priority": "medium",
-      "status": "active"
+      "status": "fix",
+      "dynamicFields": []
     },
     {
-      "id": "1017",
-      "title": "hhhhhhhhhh",
-      "description": "hhhhhhhhhhhh",
-      "dateStart": "2025-05-22T00:00:00.000Z",
-      "dateEnd": "2025-05-23T00:00:00.000Z",
+      "id": "obj6",
+      "title": "Интеграция с Google Analytics",
+      "description": "Настройка отслеживания событий",
+      "dateStart": "2025-06-25",
+      "dateEnd": "2025-07-10",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "tracking_id", "value": "UA-123456" }
+      ]
+    },
+    {
+      "id": "obj7",
+      "title": "Рефакторинг авторизации",
+      "description": "Переход с JWT на OAuth 2.0",
+      "dateStart": "2025-07-01",
+      "dateEnd": "2025-07-15",
       "priority": "medium",
-      "status": "active"
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj8",
+      "title": "Деплой на production",
+      "description": "Выпуск версии 2.5.0",
+      "dateStart": "2025-07-05",
+      "dateEnd": "2025-07-20",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "version", "value": "2.5.0" }
+      ]
+    },
+    {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+            {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+            {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+            {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj9",
+      "title": "Написание документации",
+      "description": "API Guide для разработчиков",
+      "dateStart": "2025-07-10",
+      "dateEnd": "2025-07-25",
+      "priority": "low",
+      "status": "fix",
+      "dynamicFields": []
+    },
+    {
+      "id": "obj10",
+      "title": "Миграция на новый сервер",
+      "description": "Перенос БД и бэкенда",
+      "dateStart": "2025-07-15",
+      "dateEnd": "2025-07-30",
+      "priority": "high",
+      "status": "active",
+      "dynamicFields": [
+        { "key": "server_ip", "value": "192.168.1.100" }
+      ]
+    },
+    {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
+    },
+        {
+      "id": "obj100",
+      "title": "Финальный ревью кода",
+      "description": "Проверка перед релизом",
+      "dateStart": "2025-12-10",
+      "dateEnd": "2025-12-20",
+      "priority": "high",
+      "status": "fix",
+      "dynamicFields": [
+        { "key": "reviewer", "value": "Главный разработчик" }
+      ]
     }
   ]
 }

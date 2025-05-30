@@ -1,31 +1,31 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import type { TObjective } from "../../types/ObjectiveTable";
+import type { TObjective } from "../../types/Types";
 
 export const columnHelper = createColumnHelper<TObjective>();
 
 export const columns = [
-   columnHelper.accessor('id', {
-      cell: info => info.getValue(),
-      header: () => 'Task ID'
-   }),
    columnHelper.accessor('title', {
       cell: info => info.getValue(),
-      header: () => 'Title'
+      header: () => 'Название задачи'
+   }),
+   columnHelper.accessor('description', {
+      cell: info => info.getValue(),
+      header: () => 'Описание'
    }),
    columnHelper.accessor('dateStart', {
       cell: info => info.getValue().toLocaleDateString('ru-RU'),
-      header: () => 'Start Date'
+      header: () => 'Стартовая дата'
    }),
    columnHelper.accessor('dateEnd', {
       cell: info => info.getValue().toLocaleDateString('ru-RU'),
-      header: () => 'Deadline'
+      header: () => 'Крайний срок'
    }),
    columnHelper.accessor('status', {
       cell: info => info.getValue(),
-      header: () => 'Status'
+      header: () => 'Вид задачи'
    }),
    columnHelper.accessor('priority', {
       cell: info => info.getValue(),
-      header: () => 'Priority'
+      header: () => 'Приоритет'
    }),
 ];
