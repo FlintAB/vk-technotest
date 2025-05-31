@@ -1,0 +1,73 @@
+.fieldForm {
+   background-color: var(--vk-white);
+   border-radius: 8px;
+   padding: 20px;
+   margin-bottom: 24px;
+   box-shadow:
+      0 1px 0 0 var(--vk-border),
+      0 0 0 1px var(--vk-border);
+}
+
+.title {
+   margin-top: 0;
+   margin-bottom: 16px;
+   font-size: 16px;
+   color: var(--vk-dark-gray);
+}
+
+.fieldInput {
+   width: 100%;
+   padding: 10px 12px;
+   margin-bottom: 16px;
+   border: 1px solid var(--vk-border);
+   border-radius: 6px;
+   font-size: 14px;
+}
+
+.fieldInput:focus {
+   border-color: var(--vk-blue);
+   outline: none;
+}
+
+.fieldActions {
+   display: flex;
+   gap: 12px;
+}
+
+.addButton {
+   background-color: var(--vk-blue);
+   color: white;
+   border: none;
+   padding: 10px 16px;
+   border-radius: 6px;
+   font-size: 14px;
+   cursor: pointer;
+   transition: background-color 0.2s;
+   flex: 1;
+}
+
+.addButton:hover {
+   background-color: #3a6ea5;
+}
+
+.addButton:disabled {
+   background-color: var(--vk-gray);
+   cursor: not-allowed;
+   opacity: 0.7;
+}
+
+.cancelButton {
+   background-color: var(--vk-gray);
+   color: var(--vk-dark-gray);
+   border: none;
+   padding: 10px 16px;
+   border-radius: 6px;
+   font-size: 14px;
+   cursor: pointer;
+   transition: background-color 0.2s;
+   flex: 1;
+}
+
+.cancelButton:hover {
+   background-color: #e0e0e0;
+}
