@@ -1,5 +1,5 @@
 .fieldForm {
-   background-color: var(--vk-white);
+   background-color: var(--vk-light-font-color);
    border-radius: 8px;
    padding: 20px;
    margin-bottom: 24px;
@@ -12,7 +12,7 @@
    margin-top: 0;
    margin-bottom: 16px;
    font-size: 16px;
-   color: var(--vk-dark-gray);
+   color: var(--vk-dark-font-color);
 }
 
 .fieldInput {
@@ -35,8 +35,8 @@
 }
 
 .addButton {
-   background-color: var(--vk-blue);
-   color: white;
+   background-color: var(--vk-submit);
+   color: var(--vk-light-font-color);
    border: none;
    padding: 10px 16px;
    border-radius: 6px;
@@ -47,18 +47,18 @@
 }
 
 .addButton:hover {
-   background-color: #3a6ea5;
+   background-color: var(--vk-hover);
 }
 
 .addButton:disabled {
-   background-color: var(--vk-gray);
+   background-color: var(--vk-disabled);
    cursor: not-allowed;
    opacity: 0.7;
 }
 
 .cancelButton {
-   background-color: var(--vk-gray);
-   color: var(--vk-dark-gray);
+   background-color: var(--vk-remove);
+   color: var(--vk-light-font-color);
    border: none;
    padding: 10px 16px;
    border-radius: 6px;
@@ -69,5 +69,5 @@
 }
 
 .cancelButton:hover {
-   background-color: #e0e0e0;
+   background-color: var(--vk-hover);
 }

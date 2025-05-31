@@ -1,11 +1,17 @@
 :root {
-  --vk-blue: #5181b8;
-  --vk-gray: #e1e3e6;
-  --vk-dark-gray: #909499;
-  --vk-white: #ffffff;
-  --vk-border: #d7d8d9;
+  --vk-blue: #2787f5;
+  --vk-blue-hover: #5c9ce6;
+  --vk-light-font-color: #fafbfc;
+  --vk-dark-font-color: #b2b2b2;
+  --vk-cell-header-color: #5181b8;
   --vk-hover: #f5f5f5;
-  --vk-remove: rgb(163, 50, 50);
+  --vk-submit: #3dcc4b;
+  --vk-remove: #ff3347;
+  --vk-disabled: #e5ebf1;
+  --vk-light-border: #ffffff;
+  --vk-gray-backgound: #828282;
+  --vk-dark-gray: #909499;
+  --vk-border: #d7d8d9;
 }
 
 * {
@@ -18,6 +24,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   color: #000000;
+  background-color: #fafbfc;
 }
 
 button {
@@ -39,7 +46,6 @@ button {
   overscroll-behavior: contain;
 }
 
-/* Глобальные анимации */
 @keyframes vk-fade-in {
   from {
     opacity: 0;
@@ -49,7 +55,6 @@ button {
   }
 }
 
-/* Кастомные скроллбары */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

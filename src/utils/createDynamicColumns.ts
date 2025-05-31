@@ -17,7 +17,7 @@ export function createDynamicColumns(data: TObjective[]): TDynamicColumnDef[] {
    },
    {
       id: `dynamicFields.${key}`,
-      header: key.toUpperCase(),
+      header: key.charAt(0) + key.slice(1),
       cell: ({row}) => {
          const field = row.original.dynamicFields.find(f => f.key === key);
          const value = field ? field.value : '';

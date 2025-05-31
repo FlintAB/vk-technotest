@@ -1,5 +1,5 @@
 .form {
-   background-color: var(--vk-white);
+   background-color: var(--vk-light-border);
    border-radius: 8px;
    padding: 24px;
    box-shadow:
@@ -16,7 +16,7 @@
 label {
    display: block;
    margin-bottom: 8px;
-   color: var(--vk-dark-gray);
+   color: var(--vk-dark-font-color);
    font-size: 14px;
    font-weight: 500;
 }
@@ -35,9 +35,14 @@ input:focus {
    outline: none;
 }
 
+.line {
+   border-top: 1px solid var(--vk-border);
+}
+
 .readOnlyInput {
-   background-color: var(--vk-gray);
-   cursor: not-allowed;
+   background-color: var(--vk-light-border);
+   color: var(--vk-dark-font-color);
+   border: none;
 }
 
 select {
@@ -48,7 +53,7 @@ select {
 }
 
 .error {
-   color: #ff3347;
+   color: var(--vk-remove);
    font-size: 13px;
    margin-top: 6px;
    display: block;
@@ -61,8 +66,8 @@ select {
 }
 
 .submitButton {
-   background-color: var(--vk-blue);
-   color: white;
+   background-color: var(--vk-submit);
+   color: var(--vk-light-font-color);
    border: none;
    padding: 10px 20px;
    border-radius: 6px;
@@ -73,12 +78,13 @@ select {
 }
 
 .submitButton:hover {
-   background-color: #3a6ea5;
+   background-color: var(--vk-hover);
+   color: var(--vk-dark-font-color);
 }
 
 .cancelButton {
-   background-color: var(--vk-dark-gray);
-   color: var(--vk-gray);
+   background-color: var(--vk-remove);
+   color: var(--vk-light-font-color);
    border: none;
    padding: 10px 20px;
    border-radius: 6px;
@@ -89,5 +95,6 @@ select {
 }
 
 .cancelButton:hover {
-   background-color: #696d72;
+   background-color: var(--vk-hover);
+   color: var(--vk-dark-font-color);
 }

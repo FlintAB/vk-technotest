@@ -56,7 +56,7 @@ export const addField = async (
    flatData: TObjective[],
    dynamicColumns: TDynamicColumnDef[]
 ) => {
-      if (dynamicColumns.length >= 8) {
+      if (dynamicColumns.length >= 9) {
       alert('Максимальное количество полей в таблице 15');
       return;
       }

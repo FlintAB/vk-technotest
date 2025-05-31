@@ -63,7 +63,7 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
         {errors.status && <span className={styles.error}>{errors.status.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <h3>Дополнительные поля</h3>
+        <h3 className={styles.line}>Дополнительные поля</h3>
         {dynamicFieldKeys.map((key, index) => (
           <div key={key} className={styles.formGroup}>
             <input
