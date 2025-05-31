@@ -1,10 +1,26 @@
 :root {
-  --scrollbar-thumb: #888;
+  --vk-blue: #5181b8;
+  --vk-gray: #e1e3e6;
+  --vk-dark-gray: #909499;
+  --vk-white: #ffffff;
+  --vk-border: #d7d8d9;
+  --vk-hover: #f5f5f5;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
+  scrollbar-color: var(--vk-dark-gray) transparent;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: #000000;
+}
+
+button {
+  font-family: inherit;
 }
 
 ::-webkit-scrollbar {
@@ -13,7 +29,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
+  background: var(--vk-dark-gray);
   border-radius: 4px;
 }
 
