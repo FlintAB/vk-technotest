@@ -5,9 +5,9 @@ import { useColumns } from "../columns/columns";
 import { AddFieldForm } from "../field/AddFieldForm";
 import { ObjectiveForm } from "../form/AddObjectiveForm";
 import { useObjectives } from "../hooks/useObjectives";
-import { ObjectiveTable } from "../table/objectiveTable";
 import type { TObjective } from "../../types/Types";
 import styles from './App.module.css';
+import { ObjectiveTable } from "../table/objectiveTable";
 
 
 function App() {
@@ -104,7 +104,7 @@ function App() {
               }}
         >
           {isLoading ? (
-            <div>Загрузка данных...</div>
+            <div className={styles.loading}>Загрузка данных...</div>
           ) : error ? (
             <div>Ошибка: {error.message}</div>
           ) : flatData.length == 0 ? (
@@ -117,9 +117,9 @@ function App() {
                 addedFieldKeys={addedFieldKeys}
                 onRemoveField={handleRemoveField}
               />
-              {isFetching && <div>Подгрузка данных...</div>}
+              {isFetching && <div className={styles.loading}>Подгрузка данных...</div>}
               {!hasNextPage && flatData.length > 0 && (
-                <div>Все данные успешно загружены!</div>
+                <div className={styles.loading}>Все данные успешно загружены!</div>
               )}
             </>
           )}

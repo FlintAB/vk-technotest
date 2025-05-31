@@ -1,0 +1,41 @@
+.tableContainer {
+   border-radius: 8px;
+   background-color: var(--vk-white);
+   box-shadow:
+      0 1px 0 0 var(--vk-border),
+      0 0 0 1px var(--vk-border);
+   overflow: hidden;
+}
+
+.table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.headerCell {
+   background-color: var(--vk-gray);
+   padding: 12px 16px;
+   text-align: left;
+   font-weight: 500;
+   color: var(--vk-dark-gray);
+   border-bottom: 1px solid var(--vk-border);
+}
+
+.cell {
+   padding: 12px 16px;
+   border-bottom: 1px solid var(--vk-border);
+}
+
+.row:hover {
+   background-color: var(--vk-hover);
+}
+
+.removeButton {
+   color: var(--vk-white);
+   background: var(--vk-remove);
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 12px;
+   padding: 4px;
+}

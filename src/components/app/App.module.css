@@ -29,3 +29,9 @@
    background-color: var(--vk-gray);
    cursor: not-allowed;
 }
+
+.loading {
+   padding: 20px;
+   text-align: center;
+   color: var(--vk-dark-gray);
+}
