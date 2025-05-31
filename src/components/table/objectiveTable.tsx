@@ -5,8 +5,9 @@ import {
 } from "@tanstack/react-table";
 import type { TObjective } from "../../types/Types";
 import type { ExtendedObjectiveTableProps } from "../../types/Props";
+import React from "react";
 
-export const ObjectiveTable = ({ data, columns, addedFieldKeys, onRemoveField }: ExtendedObjectiveTableProps) => {
+export const ObjectiveTable = React.memo(({ data, columns, addedFieldKeys, onRemoveField }: ExtendedObjectiveTableProps) => {
   const table = useReactTable<TObjective>({
     data,
     columns,
@@ -73,4 +74,4 @@ export const ObjectiveTable = ({ data, columns, addedFieldKeys, onRemoveField }:
       </tbody>
     </table>
   );
-};
+});
