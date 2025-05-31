@@ -7,6 +7,7 @@ import { ObjectiveForm } from "../form/AddObjectiveForm";
 import { useObjectives } from "../hooks/useObjectives";
 import { ObjectiveTable } from "../table/objectiveTable";
 import type { TObjective } from "../../types/Types";
+import styles from './App.module.css';
 
 
 function App() {
@@ -53,15 +54,17 @@ function App() {
   );
 
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.header}>
         <button
           onClick={() => setShowForm(true)}
+          className={styles.button}
         >
           Добавить новую запись
         </button>
         <button
           onClick={() => setShowAddField(true)}
+          className={styles.button}
           disabled={dynamicColumns.length >= 15}
         >
           Добавить новое поле
