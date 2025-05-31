@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ObjectiveSchema, type TObjectiveForm } from '../../schemas/Objective';
 import type { ObjectiveFormProps } from '../../types/Props';
+import styles from './AddObjectiveForm.module.css';
 
 
 export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel, dynamicFieldKeys }) => {
@@ -23,68 +24,67 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
   });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <div className={styles.formGroup}>
         <label>Название задачи</label>
-        <input {...register('title')} />
-        {errors.title && <span style={{ color: 'red' }}>{errors.title.message}</span>}
+        <input {...register('title')}/>
+        {errors.title && <span className={styles.error}>{errors.title.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <label>Описание</label>
         <input {...register('description')} />
-        {errors.description && <span style={{ color: 'red' }}>{errors.description.message}</span>}
+        {errors.description && <span className={styles.error}>{errors.description.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <label>Стартовая дата</label>
         <input type="date" {...register('dateStart', { valueAsDate: true })} />
-        {errors.dateStart && <span style={{ color: 'red' }}>{errors.dateStart.message}</span>}
+        {errors.dateStart && <span className={styles.error}>{errors.dateStart.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <label>Крайний срок</label>
         <input type="date" {...register('dateEnd', { valueAsDate: true })} />
-        {errors.dateEnd && <span style={{ color: 'red' }}>{errors.dateEnd.message}</span>}
+        {errors.dateEnd && <span className={styles.error}>{errors.dateEnd.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <label>Приоритет</label>
         <select {...register('priority')}>
           <option value="Низкий">Низкий</option>
           <option value="Средний">Средний</option>
           <option value="Высокий">Высокий</option>
         </select>
-        {errors.priority && <span style={{ color: 'red' }}>{errors.priority.message}</span>}
+        {errors.priority && <span className={styles.error}>{errors.priority.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <label>Вид задачи</label>
         <select {...register('status')}>
           <option value="Сделать">Сделать</option>
           <option value="Исправить">Исправить</option>
         </select>
-        {errors.status && <span style={{ color: 'red' }}>{errors.status.message}</span>}
+        {errors.status && <span className={styles.error}>{errors.status.message}</span>}
       </div>
-      <div>
+      <div className={styles.formGroup}>
         <h3>Дополнительные поля</h3>
         {dynamicFieldKeys.map((key, index) => (
-          <div key={key} style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+          <div key={key} className={styles.formGroup}>
             <input
               value={key}
               readOnly
-              style={{ padding: '8px', background: '#f0f0f0' }}
+              className={styles.readOnlyInput}
             />
             <input
               {...register(`dynamicFields.${index}.value`)}
               placeholder={`Значение для ${key}`}
-              style={{ padding: '8px' }}
             />
             {errors.dynamicFields?.[index]?.value && (
-              <span style={{ color: 'red' }}>{errors.dynamicFields[index]?.value?.message}</span>
+              <span className={styles.error}>{errors.dynamicFields[index]?.value?.message}</span>
             )}
           </div>
         ))}
-        {errors.dynamicFields && <span style={{ color: 'red' }}>{errors.dynamicFields.message}</span>}
+        {errors.dynamicFields && <span className={styles.error}>{errors.dynamicFields.message}</span>}
       </div>
-      <div style={{ display: 'flex', gap: '10px' }}>
-        <button type="submit">Сделать запись</button>
-        <button type="button" onClick={onCancel}>Вернуться к таблице</button>
+      <div className={styles.actions}>
+        <button type="submit" className={styles.submitButton}>Сделать запись</button>
+        <button type="button" onClick={onCancel} className={styles.cancelButton}>Вернуться к таблице</button>
       </div>
     </form>
   );
