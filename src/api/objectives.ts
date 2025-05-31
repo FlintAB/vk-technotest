@@ -29,7 +29,7 @@ export const addObjective = async (formData: TObjectiveForm) => {
          body: JSON.stringify({
             ...formData,
             dateStart: formData.dateStart.toString(),
-            dateEnd: formData.dateStart.toString(),
+            dateEnd: formData.dateEnd.toString(),
             dynamicFields: formData.dynamicFields?.map(field => ({
             key: field.key,
             value: field.value instanceof Date ? field.value.toISOString() : field.value,
