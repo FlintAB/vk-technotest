@@ -3,7 +3,7 @@ import type { TObjectiveForm } from "../schemas/Objective";
 import type { TObjective, TDynamicColumnDef } from "../types/Types";
 
 export const fetchObjectives = async (page: number) => {
-   const response = await fetch (`http://localhost:3001/objectives?_page=${page}&_per_page=${PAGE_CAPACITY}`);
+   const response = await fetch (`http://localhost:3000/objectives?_page=${page}&_per_page=${PAGE_CAPACITY}`);
 
    if (!response.ok) {
       throw new Error(`Ошибка при подключении списка: ${response.status}`);
@@ -21,7 +21,7 @@ export const fetchObjectives = async (page: number) => {
 };
 
 export const addObjective = async (formData: TObjectiveForm) => {
-      const response = await fetch('http://localhost:3001/objectives', {
+      const response = await fetch('http://localhost:3000/objectives', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export const addField = async (
             { key: fieldKey, value: ''},
          ];
 
-         await fetch(`http://localhost:3001/objectives/${objective.id}`, {
+         await fetch(`http://localhost:3000/objectives/${objective.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ dynamicFields: updatedDynamicFields }),
@@ -92,7 +92,7 @@ export const removeField = async (
          field => field.key !== fieldKey
       );
 
-      await fetch(`http://localhost:3001/objectives/${objective.id}`, {
+      await fetch(`http://localhost:3000/objectives/${objective.id}`, {
          method: 'PATCH',
          headers: { 'Content-Type': 'application/json' },
          body: JSON.stringify({ dynamicFields: updatedDynamicFields}), 
