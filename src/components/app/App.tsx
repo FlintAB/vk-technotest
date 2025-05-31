@@ -1,7 +1,7 @@
 import type { ColumnDef } from "@tanstack/react-table";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useMemo } from "react";
 import type { TObjectiveForm } from "../../schemas/Objective";
-import { columns } from "../columns/columns";
+import { useColumns } from "../columns/columns";
 import { AddFieldForm } from "../field/AddFieldForm";
 import { ObjectiveForm } from "../form/AddObjectiveForm";
 import { useObjectives } from "../hooks/useObjectives";
@@ -29,6 +29,12 @@ function App() {
     handleRemoveField,
   } = useObjectives();
 
+  const baseColumns = useColumns();
+  const allColumns = useMemo(
+    () => [...baseColumns, ...dynamicColumns],
+    [baseColumns, dynamicColumns]
+  );
+
   const fetchMoreOnBottomReached = useCallback(
     (containerRefElement?: HTMLDivElement | null) => {
       if (containerRefElement) {
@@ -45,7 +51,7 @@ function App() {
     },
     [fetchNextPage, isFetching, hasNextPage]
   );
-  
+
   return (
     <div>
       <div>
@@ -104,7 +110,7 @@ function App() {
             <>
               <ObjectiveTable
                 data={flatData}
-                columns={[...columns, ...dynamicColumns] as ColumnDef<TObjective>[]}
+                columns={allColumns as ColumnDef<TObjective>[]}
                 addedFieldKeys={addedFieldKeys}
                 onRemoveField={handleRemoveField}
               />

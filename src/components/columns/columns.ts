@@ -1,9 +1,11 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { TObjective } from "../../types/Types";
+import { useMemo } from "react";
 
 export const columnHelper = createColumnHelper<TObjective>();
 
-export const columns = [
+export const useColumns = () => {
+   return useMemo(() => [
    columnHelper.accessor('title', {
       cell: info => info.getValue(),
       header: () => 'Название задачи'
@@ -28,4 +30,5 @@ export const columns = [
       cell: info => info.getValue(),
       header: () => 'Приоритет'
    }),
-];
+], [])
+}
