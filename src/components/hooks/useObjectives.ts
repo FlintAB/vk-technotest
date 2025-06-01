@@ -105,6 +105,6 @@ export const useObjectives = () => {
       flatData,
       handleAddField,
       handleAddObjective,
-      handleRemoveField
+      handleRemoveField,
    };
 };

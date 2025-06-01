@@ -3,7 +3,7 @@ import {
   getCoreRowModel, 
   useReactTable 
 } from "@tanstack/react-table";
-import type { TObjective } from "../../types/Types";
+import type {  TObjective } from "../../types/Types";
 import type { ExtendedObjectiveTableProps } from "../../types/Props";
 import styles from './ObjectiveTable.module.css';
 import React from "react";

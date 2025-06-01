@@ -18,7 +18,7 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
       description: '',
       dateStart: new Date(),
       dateEnd: new Date(),
-      priority: 'Низкий',
+      priority: 'low',
       status: 'В работе',
       dynamicFields: dynamicFieldKeys.map(key => ({ key, value: '' })),
     },
