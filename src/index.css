@@ -12,6 +12,9 @@
   --vk-gray-backgound: #828282;
   --vk-dark-gray: #909499;
   --vk-border: #d7d8d9;
+  --vk-priority-low-color: #4bb34b;
+  --vk-priority-medium-color: #ffa000;
+  --vk-priority-high-color: #e64646;
 }
 
 * {
@@ -23,8 +26,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
-  color: #000000;
-  background-color: #fafbfc;
 }
 
 button {

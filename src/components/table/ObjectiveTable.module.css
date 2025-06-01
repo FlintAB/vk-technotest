@@ -83,3 +83,24 @@
 .removeButton:hover {
    background-color: var(--vk-hover);
 }
+
+.priorityLow {
+   background-color: var(--vk-priority-low-color);
+   color: var(--vk-light-font-color);
+   padding: 0.8em;
+   border-radius: 10px;
+}
+
+.priorityMedium {
+   background-color: var(--vk-priority-medium-color);
+   color: var(--vk-light-font-color);
+   padding: 0.8em;
+   border-radius: 10px;
+}
+
+.priorityHigh {
+   background-color: var(--vk-priority-high-color);
+   color: var(--vk-light-font-color);
+   padding: 0.8em;
+   border-radius: 10px;
+}

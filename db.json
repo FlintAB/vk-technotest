@@ -1,4 +1,34 @@
 {
   "objectives": [
+    {
+      "id": "692e",
+      "title": "Hello World!",
+      "description": "Съешь ещё этих мягких французских булок, да выпей чаю",
+      "dateStart": "Wed May 28 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "dateEnd": "Mon Jun 02 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "priority": "high",
+      "status": "В работе",
+      "dynamicFields": []
+    },
+    {
+      "id": "47a9",
+      "title": "aaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaaaaa",
+      "dateStart": "Sat Jun 28 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "dateEnd": "Sun Jun 29 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "priority": "low",
+      "status": "В работе",
+      "dynamicFields": []
+    },
+    {
+      "id": "d074",
+      "title": "aaaaaaaaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaaaaaaaaa",
+      "dateStart": "Thu Jul 31 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "dateEnd": "Tue Aug 05 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
+      "priority": "medium",
+      "status": "В работе",
+      "dynamicFields": []
+    }
   ]
 }

@@ -24,7 +24,7 @@ export const ObjectiveSchema = z.object({
       .nonempty('Конечная дата обязательна')
    ]),
 
-   priority: z.enum(["Низкий", "Средний", "Высокий"]),
+   priority: z.enum(["low", "medium", "high"]),
 
    status: z.enum(["В работе", "Выполнено"]),
 

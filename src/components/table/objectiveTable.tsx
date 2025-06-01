@@ -27,7 +27,7 @@ export const ObjectiveTable = React.memo(({ data, columns, addedFieldKeys, onRem
                     {header.isPlaceholder
                       ? null
                       : (
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div>
                           <span>
                             {flexRender(
                               header.column.columnDef.header,
@@ -53,7 +53,7 @@ export const ObjectiveTable = React.memo(({ data, columns, addedFieldKeys, onRem
           <tbody>
             {table.getRowModel().rows.map(row => (
               <tr key={row.id} className={styles.row}>
-                {row.getVisibleCells().map(cell => (
+                {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className={styles.cell}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>

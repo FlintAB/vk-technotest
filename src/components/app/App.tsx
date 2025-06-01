@@ -2,13 +2,12 @@ import type { ColumnDef } from "@tanstack/react-table";
 import { useState, useRef, useCallback, useMemo } from "react";
 import type { TObjectiveForm } from "../../schemas/Objective";
 import { useColumns } from "../columns/columns";
-import { AddFieldForm } from "../field/AddFieldForm";
-import { ObjectiveForm } from "../form/AddObjectiveForm";
+import { AddFieldForm } from "../fieldForm/AddFieldForm";
+import { ObjectiveForm } from "../objectiveForm/AddObjectiveForm";
 import { useObjectives } from "../hooks/useObjectives";
 import type { TObjective } from "../../types/Types";
 import styles from './App.module.css';
-import { ObjectiveTable } from "../table/objectiveTable";
-
+import { ObjectiveTable } from "../table/ObjectiveTable";
 
 function App() {
   const [showForm, setShowForm] = useState(false);

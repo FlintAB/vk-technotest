@@ -60,9 +60,9 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
       <div className={styles.formGroup}>
         <label htmlFor='priority'>Приоритет</label>
         <select {...register('priority')} id='priority'>
-          <option value="Низкий">Низкий</option>
-          <option value="Средний">Средний</option>
-          <option value="Высокий">Высокий</option>
+          <option value="low">Низкий</option>
+          <option value="medium">Средний</option>
+          <option value="high">Высокий</option>
         </select>
         {errors.priority && <span className={styles.error}>{errors.priority.message}</span>}
       </div>

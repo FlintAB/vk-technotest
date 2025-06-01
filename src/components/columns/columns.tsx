@@ -1,6 +1,8 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { TObjective } from "../../types/Types";
 import { useMemo } from "react";
+import { priorityLabels } from "../../constants/constants";
+import styles from '../table/ObjectiveTable.module.css';
 
 export const columnHelper = createColumnHelper<TObjective>();
 
@@ -27,7 +29,12 @@ export const useColumns = () => {
       header: () => 'Статус задачи'
    }),
    columnHelper.accessor('priority', {
-      cell: info => info.getValue(),
+      cell: info => {
+         const value = info.getValue();
+         const className = `priority${value.charAt(0).toUpperCase() + value.slice(1)}`;
+         const label = priorityLabels[value] || value;
+         return <span className={styles[className]}>{label}</span>;
+      },
       header: () => 'Приоритет'
    }),
 ], [])
