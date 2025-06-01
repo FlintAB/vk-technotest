@@ -82,6 +82,13 @@ select {
    color: var(--vk-dark-font-color);
 }
 
+.submitButton:disabled {
+   background-color: var(--vk-disabled);
+   color: var(--vk-dark-font-color);
+   cursor: not-allowed;
+   opacity: 0.7;
+}
+
 .cancelButton {
    background-color: var(--vk-remove);
    color: var(--vk-light-font-color);

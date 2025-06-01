@@ -10,7 +10,8 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isValid, dirtyFields },
+    watch
   } = useForm<TObjectiveForm>({
     resolver: zodResolver(ObjectiveSchema),
     defaultValues: {
@@ -21,33 +22,44 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
       status: 'В работе',
       dynamicFields: dynamicFieldKeys.map(key => ({ key, value: '' })),
     },
+    mode: 'onChange'
   });
+
+  const { title, description, dateStart, dateEnd } = watch();
+  const isFormIncomplete = !title?.trim() || !description?.trim() || !dateStart || !dateEnd;
+  const isFormUntouched = !(
+    dirtyFields.title ||
+    dirtyFields.description ||
+    dirtyFields.dateStart ||
+    dirtyFields.dateEnd
+  );
+  const isSubmitDisabled = isSubmitting || !isValid || isFormUntouched || isFormIncomplete;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div className={styles.formGroup}>
-        <label>Название задачи</label>
-        <input {...register('title')}/>
+        <label htmlFor='title'>Название задачи</label>
+        <input {...register('title')} id='title'/>
         {errors.title && <span className={styles.error}>{errors.title.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Описание</label>
-        <input {...register('description')} />
+        <label htmlFor='description'>Описание</label>
+        <input {...register('description')} id='description'/>
         {errors.description && <span className={styles.error}>{errors.description.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Стартовая дата</label>
-        <input type="date" {...register('dateStart', { valueAsDate: true })} />
+        <label htmlFor='dateStart'>Стартовая дата</label>
+        <input type="date" {...register('dateStart', { valueAsDate: true })} id='dateStart'/>
         {errors.dateStart && <span className={styles.error}>{errors.dateStart.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Крайний срок</label>
-        <input type="date" {...register('dateEnd', { valueAsDate: true })} />
+        <label htmlFor='dateEnd'>Крайний срок</label>
+        <input type="date" {...register('dateEnd', { valueAsDate: true })} id='dateEnd'/>
         {errors.dateEnd && <span className={styles.error}>{errors.dateEnd.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Приоритет</label>
-        <select {...register('priority')}>
+        <label htmlFor='priority'>Приоритет</label>
+        <select {...register('priority')} id='priority'>
           <option value="Низкий">Низкий</option>
           <option value="Средний">Средний</option>
           <option value="Высокий">Высокий</option>
@@ -55,8 +67,8 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
         {errors.priority && <span className={styles.error}>{errors.priority.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Статус задачи</label>
-        <select {...register('status')}>
+        <label htmlFor='status'>Статус задачи</label>
+        <select {...register('status')} id='status'>
           <option value="В работе">В работе</option>
           <option value="Выполнено">Выполнено</option>
         </select>
@@ -83,7 +95,7 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
         {errors.dynamicFields && <span className={styles.error}>{errors.dynamicFields.message}</span>}
       </div>
       <div className={styles.actions}>
-        <button type="submit" className={styles.submitButton}>Сделать запись</button>
+        <button type="submit" disabled={isSubmitDisabled} className={styles.submitButton}>{isSubmitting ? 'Отправка...' : 'Сделать запись'}</button>
         <button type="button" onClick={onCancel} className={styles.cancelButton}>Вернуться к таблице</button>
       </div>
     </form>
