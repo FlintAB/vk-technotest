@@ -81,7 +81,7 @@
 }
 
 .removeButton:hover {
-   background-color: var(--vk-hover);
+   background-color: var(--vk-remove-hover);
 }
 
 .priorityLow {

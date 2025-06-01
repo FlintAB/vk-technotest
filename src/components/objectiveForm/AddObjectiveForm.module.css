@@ -78,7 +78,7 @@ select {
 }
 
 .submitButton:hover {
-   background-color: var(--vk-hover);
+   background-color: var(--vk-submit-hover);
    color: var(--vk-dark-font-color);
 }
 
@@ -102,6 +102,6 @@ select {
 }
 
 .cancelButton:hover {
-   background-color: var(--vk-hover);
+   background-color: var(--vk-remove-hover);
    color: var(--vk-dark-font-color);
 }

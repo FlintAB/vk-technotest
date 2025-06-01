@@ -8,7 +8,12 @@
       "dateEnd": "Mon Jun 02 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
       "priority": "high",
       "status": "В работе",
-      "dynamicFields": []
+      "dynamicFields": [
+        {
+          "key": "11",
+          "value": ""
+        }
+      ]
     },
     {
       "id": "47a9",
@@ -18,7 +23,12 @@
       "dateEnd": "Sun Jun 29 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
       "priority": "low",
       "status": "В работе",
-      "dynamicFields": []
+      "dynamicFields": [
+        {
+          "key": "11",
+          "value": ""
+        }
+      ]
     },
     {
       "id": "d074",
@@ -28,7 +38,12 @@
       "dateEnd": "Tue Aug 05 2025 03:00:00 GMT+0300 (Москва, стандартное время)",
       "priority": "medium",
       "status": "В работе",
-      "dynamicFields": []
+      "dynamicFields": [
+        {
+          "key": "11",
+          "value": ""
+        }
+      ]
     }
   ]
 }
