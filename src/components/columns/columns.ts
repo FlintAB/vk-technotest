@@ -16,15 +16,15 @@ export const useColumns = () => {
    }),
    columnHelper.accessor('dateStart', {
       cell: info => info.getValue().toLocaleDateString('ru-RU'),
-      header: () => 'Стартовая дата'
+      header: () => 'Дата начала'
    }),
    columnHelper.accessor('dateEnd', {
       cell: info => info.getValue().toLocaleDateString('ru-RU'),
-      header: () => 'Крайний срок'
+      header: () => 'Срок завершения'
    }),
    columnHelper.accessor('status', {
       cell: info => info.getValue(),
-      header: () => 'Вид задачи'
+      header: () => 'Статус задачи'
    }),
    columnHelper.accessor('priority', {
       cell: info => info.getValue(),

@@ -11,7 +11,7 @@ export type TObjective = {
    description: string;
    dateStart: Date;
    dateEnd: Date;
-   status: 'Сделать' | 'Исправить';
+   status: 'В работе' | 'Выполнено';
    priority: 'Низкий' | 'Средний' | 'Высокий';
    dynamicFields: {key: string; value: string | number | Date}[];
 }

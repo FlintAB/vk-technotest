@@ -18,7 +18,7 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
       dateStart: new Date(),
       dateEnd: new Date(),
       priority: 'Низкий',
-      status: 'Исправить',
+      status: 'В работе',
       dynamicFields: dynamicFieldKeys.map(key => ({ key, value: '' })),
     },
   });
@@ -55,10 +55,10 @@ export const ObjectiveForm: React.FC<ObjectiveFormProps> = ({ onSubmit, onCancel
         {errors.priority && <span className={styles.error}>{errors.priority.message}</span>}
       </div>
       <div className={styles.formGroup}>
-        <label>Вид задачи</label>
+        <label>Статус задачи</label>
         <select {...register('status')}>
-          <option value="Сделать">Сделать</option>
-          <option value="Исправить">Исправить</option>
+          <option value="В работе">В работе</option>
+          <option value="Выполнено">Выполнено</option>
         </select>
         {errors.status && <span className={styles.error}>{errors.status.message}</span>}
       </div>

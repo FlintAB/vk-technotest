@@ -26,7 +26,7 @@ export const ObjectiveSchema = z.object({
 
    priority: z.enum(["Низкий", "Средний", "Высокий"]),
 
-   status: z.enum(["Сделать", "Исправить"]),
+   status: z.enum(["В работе", "Выполнено"]),
 
 
    dynamicFields: z.array(
