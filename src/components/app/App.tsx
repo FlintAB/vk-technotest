@@ -7,7 +7,7 @@ import { ObjectiveForm } from "../objectiveForm/AddObjectiveForm";
 import { useObjectives } from "../hooks/useObjectives";
 import type { TObjective } from "../../types/Types";
 import styles from './App.module.css';
-import { ObjectiveTable } from "../table/ObjectiveTable";
+import { ObjectiveTable } from "../table/objectiveTable";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
